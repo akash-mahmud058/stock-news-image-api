@@ -1,0 +1,22 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# render.yaml  ·  stock-news-image-api
+# Deploy on Render.com Free plan using Docker
+# ─────────────────────────────────────────────────────────────────────────────
+
+services:
+  - type: web
+    name: stock-news-image-api
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: "3000"
+      - key: PUPPETEER_SKIP_CHROMIUM_DOWNLOAD
+        value: "true"
+      - key: PUPPETEER_EXECUTABLE_PATH
+        value: /usr/bin/chromium
+    healthCheckPath: /
+    autoDeploy: true

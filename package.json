@@ -1,0 +1,21 @@
+{
+  "name": "stock-news-image-api",
+  "version": "1.0.0",
+  "description": "HTTP API that renders stock news data as high-quality PNG social media cards",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "puppeteer": "^21.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "license": "MIT"
+}
