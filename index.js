@@ -30,6 +30,7 @@ app.post('/render', async (req, res) => {
       'Content-Type': 'image/png',
       'Content-Length': imageBuffer.length,
       'Cache-Control': 'no-cache',
+      'Content-Disposition': 'attachment; filename="stock-news-card.png"' // <-- THIS IS THE NEW LINE
     });
 
     return res.send(imageBuffer);
